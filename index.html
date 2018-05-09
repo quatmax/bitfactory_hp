@@ -33,22 +33,14 @@
           <li class="nav-item"><a class="nav-link" href="#">Service</a></li>
         </ul>
 
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Kunde" size="12" aria-label="Kunde">
-          <input class="form-control mr-sm-2" type="text" placeholder="Benutzer" size="12" aria-label="Benutzer">
-          <input class="form-control mr-sm-2" type="password" placeholder="Passwort" size="12" aria-label="Passwort">
+        <form id="login" class="form-inline my-2 my-lg-0" >
+          <input id="instance" class="form-control mr-sm-2" type="text" placeholder="Kunde" size="12" aria-label="Kunde">
+          <input id="user" class="form-control mr-sm-2" type="text" placeholder="Benutzer" size="12" aria-label="Benutzer">
+          <input id="pass" class="form-control mr-sm-2" type="password" placeholder="Passwort" size="12" aria-label="Passwort">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">&gt;</button>
         </form>
 
-<!-- 		<form>
-			<div class="form-inline">
-			  <div class="col-xs-1"><input class="form-control" type="text" placeholder="Kunde" aria-label="Kunde"></div>
-			  <div class="col-xs-1"><input class="form-control" type="text" placeholder="Benutzer" aria-label="Benutzer"></div>
-			  <div class="col-xs-1"><input class="form-control" type="password" placeholder="Passwort" aria-label="Passwort"></div>
-			  <button class="btn btn-outline-success" type="submit">&gt;</button>
-			</div>
-		  </form>
- -->	  </div>
+	</div>
     </nav>
 
     <main role="main">
@@ -96,5 +88,14 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"><\/script>')</script>
-  </body>
+	<script>
+		$('#login').on('submit', function () {
+			$.get( 'http://alex.bitfactory.at:4480/AlexLoginService?instance=at.sr.bfx&user=max&pass=bitfactory4400&urlscheme=https', function( data ) 
+			{
+				alert(data);
+			});
+			return false;
+		});
+	</script>
+	</body>
 </html>
