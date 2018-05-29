@@ -13,7 +13,24 @@
 
     <link href="css/bitfactory.css" rel="stylesheet">
   </head>
+	<script type="text/javascript" language="javascript">
 
+		function fun() 
+		{
+		  var data="";
+		  var url = "https://alex.bitfactory.at/AlexRedirector?instance=" + $("#instance").val() + "&user=" + $("#user").val() + "&pass=" + $("#pass").val() + "&urlscheme=https";
+		  alert( url );
+		  $.post(url,{},function(response) 
+		  { 
+			alert(response);
+		  })
+		  .error(function()
+		  {
+			alert("Sorry could not proceed");
+			});
+		 window.location.replace(data);
+		}	
+	</script>
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
@@ -47,7 +64,7 @@
            <input id="instance" class="form-control mr-sm-2" type="text" placeholder="Kunde" size="10" aria-label="Kunde">
            <input id="user" class="form-control mr-sm-2" type="text" placeholder="Benutzer" size="10" aria-label="Benutzer">
            <input id="pass" class="form-control mr-sm-2" type="password" placeholder="Passwort" size="10" aria-label="Passwort">
-           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">&gt;</button>
+           <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick ="fun()">&gt;</button>
          </form>
 		</div>
       </div>
