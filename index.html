@@ -14,19 +14,6 @@
 
     <link href="css/bitfactory.css" rel="stylesheet">
   </head>
-	<script type="text/javascript" language="javascript">
-
-		function fun() 
-		{
-		  var url = "https://alex.bitfactory.at/AlexRedirector?instance=" + $("#instance").val() + "&user=" + $("#user").val() + "&pass=" + $("#pass").val() + "&urlscheme=https";
-		  alert( url );
-		  jQuery.get(url,{},function(response) 
-		  { 
-			alert(response);
-			window.location.replace(response);
-		  });
-		}	
-	</script>
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
@@ -60,7 +47,7 @@
            <input id="instance" class="form-control mr-sm-2" type="text" placeholder="Kunde" size="10" aria-label="Kunde">
            <input id="user" class="form-control mr-sm-2" type="text" placeholder="Benutzer" size="10" aria-label="Benutzer">
            <input id="pass" class="form-control mr-sm-2" type="password" placeholder="Passwort" size="10" aria-label="Passwort">
-           <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick ="fun()">&gt;</button>
+           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">&gt;</button>
          </form>
 		</div>
       </div>
@@ -110,11 +97,28 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"><\/script>')</script>
+	<script type="text/javascript" language="javascript">
+
+		function fun() 
+		{
+		  var url = "https://alex.bitfactory.at/AlexRedirector?instance=" + $("#instance").val() + "&user=" + $("#user").val() + "&pass=" + $("#pass").val() + "&urlscheme=https";
+		  alert( url );
+		  jQuery.get(url,{},function(response) 
+		  { 
+			alert(response);
+			window.location.replace(response);
+		  });
+		}	
+	</script>
 	<script>
 		$('#login').on('submit', function () {
-			$.get( 'http://alex.bitfactory.at:4480/AlexLoginService', function( data ) 
+			//var url = "https://alex.bitfactory.at/AlexRedirector?instance=" + $("#instance").val() + "&user=" + $("#user").val() + "&pass=" + $("#pass").val() + "&urlscheme=https";
+			var url = "http://alex.bitfactory.at:4480/AlexLoginService?instance=" + $("#instance").val() + "&user=" + $("#user").val() + "&pass=" + $("#pass").val() + "&urlscheme=https";
+			alert(url);
+			$.get( url, function( data ) 
 			{
 				alert(data);
+				window.location.replace(data);
 			});
 			return false;
 		});
