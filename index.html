@@ -99,12 +99,9 @@
     <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"><\/script>')</script>
 	<script>
 		$('#login').on('submit', function () {
-			var url = "https://alex.bitfactory.at/AlexRedirector?instance=" + $("#instance").val() + "&user=" + $("#user").val() + "&pass=" + $("#pass").val() + "&urlscheme=https";
-			//var url = "http://alex.bitfactory.at:4480/AlexLoginService?instance=" + $("#instance").val() + "&user=" + $("#user").val() + "&pass=" + $("#pass").val() + "&urlscheme=https";
-			alert(url);
+			var url = "https://alex.bitfactory.at/AlexRedirector?instance=" + $("#instance").val() + "&user=" + $("#user").val() + "&pass=" + $("#pass").val().toUpperCase() + "&urlscheme=https";
 			$.get( url, function( data ) 
 			{
-				alert(data);
 				window.location.replace(data);
 			});
 			return false;
