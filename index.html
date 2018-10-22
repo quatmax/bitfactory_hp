@@ -87,12 +87,16 @@
 
         <hr>
       </div>
+      
+    <script src="js/bitfactory.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhKtLNZOYLr21L1THJ4zzOV6mukrjSmMQ&callback=initMap"></script>
 
      <footer class="container">
         <div class="row">
           <div class="col-12 col-md">
-            <img class="mb-2" src="img/bitfactory" alt="" width="24" height="24">
+            <img class="mb-2" src="img/bitfactory.png" alt="" width="24" height="24">
             <small class="d-block mb-3 text-muted">&copy; Bit Factory Software GmbH</small>
+            <div id="smallmap"></div>
           </div>
           <div class="col-6 col-md">
             <h5>Sitemap</h5>
@@ -127,7 +131,7 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"><\/script>')</script>
+  <script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"><\/script>')</script>
 	<script>
 		$('#login').on('submit', function () {
 			var url = "https://alex.bitfactory.at/AlexRedirector?instance=" + $("#instance").val() + "&user=" + $("#user").val() + "&pass=" + $("#pass").val().toUpperCase() + "&urlscheme=https";
