@@ -14,48 +14,20 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link href="css/bitfactory.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>	
+	<script>
+	  $(function(){
+		var includes = $('[data-include]');
+		jQuery.each(includes, function(){
+		  var file = 'includes/' + $(this).data('include') + '.html';
+		  $(this).load(file);
+		});
+	  });
+	</script>  
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-      <div class="container">
-        <a class="navbar-brand" href="https://bitfactory.at">
-			    <img src="img/alex.svg" style="width: 50px;" alt="Bit Factory"/>
-		    </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsBitFactory" aria-controls="navbarsBitFactory" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarsBitFactory">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Funktionen</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Branchen</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Preise</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Unternehmen</a>
-            </li>
-          </ul>
-		  <div>
-			<button class="btn btn-outline-light" >Login</button>
-			<button class="btn btn-outline-light" >Kontakt</button>
-		  </div>
-
-<!--		  <form id="login" class="form-inline my-2 my-lg-0" >
-           <input id="instance" class="form-control mr-sm-2" type="text" placeholder="Kunde" size="10" aria-label="Kunde">
-           <input id="user" class="form-control mr-sm-2" type="text" placeholder="Benutzer" size="10" aria-label="Benutzer">
-           <input id="pass" class="form-control mr-sm-2" type="password" placeholder="Passwort" size="10" aria-label="Passwort">
-           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">&gt;</button>
-         </form>
--->
-		</div>
-      </div>
-    </nav>
+	<div data-include="navbar"></div>
 
     <main role="main">
 
@@ -101,49 +73,9 @@
     <script src="js/bitfactory.js"></script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhKtLNZOYLr21L1THJ4zzOV6mukrjSmMQ&callback=initMap"></script>
 
-     <footer class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <h6>Funktionen</h6>
-            <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">Dienstplan</a></li>
-              <li><a class="text-muted" href="#">Fehlzeitenverwaltung</a></li>
-              <li><a class="text-muted" href="#">Zeiterfassung</a></li>
-              <li><a class="text-muted" href="#">Reporting</a></li>
-              <li><a class="text-muted" href="#">Rechtssicherheit</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <h6>Branchen</h6>
-            <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">Kliniken</a></li>
-              <li><a class="text-muted" href="#">Pflegeeinrichtungen</a></li>
-              <li><a class="text-muted" href="#">Sozialeinrichtungen</a></li>
-              <li><a class="text-muted" href="#">Dienstleister</a></li>
-              <li><a class="text-muted" href="#">Tourismus</a></li>
-              <li><a class="text-muted" href="#">Handel</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <h6>Preise</h6>
-            <ul class="list-unstyled text-small">
-              <li><a class="text-muted" href="#">All inclusive</a></li>
-              <li><a class="text-muted" href="#">Bring your own Hardware</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <h6>Unternehmen</h6>
-            <ul class="list-unstyled text-small">
-              <li>Hotlinezeiten</li>
-              <small><li>MO - DO: 08:00 - 12:00 und 13:00 - 16:00</li></small>
-              <small><li>FR: 08:00 - 12:00</li></small>
-            </ul>
-          </div>
-        </div>
-      </footer>
+	<div data-include="footer"></div>
   </main>
 
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 	<script>window.jQuery || document.write('<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"><\/script>')</script>
