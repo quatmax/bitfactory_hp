@@ -2,11 +2,11 @@ Navigation:
 
 Startseite
 ALEX Dienstplan Software
-	Zeiterfassung
+	Zeiterfassung 
 	Fehlzeitenverwaltung / Urlaub
 	Workflows (Genehmigung)
 	automatische Berechnungen
-	Überstunden
+	Ãœberstunden
 	Apps
 		Mobiler Dienstplan
 		Mitarbeiter-Cockpit
@@ -16,13 +16,13 @@ Branchen
 	Pflege
 	Krankenhaus
 	...
-Über uns
+Ãœber uns
 	...
 
 
 Optimierungsbedarf: 	
 	sprechende URLs
-	Überschriftenstruktur
+	Ãœberschriftenstruktur
 	Navigation
 	Meta-Titles
 	Meta-Descriptions
