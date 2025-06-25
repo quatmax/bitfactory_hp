@@ -11,6 +11,11 @@ https://github.com/quatmax/bitfactory_hp/issues/1
 **_```ddddd```_**
 
 
-[#1](quatmax/bitfactory_hp#1)
+quatmax/bitfactory_hp#1
+
+[#1](../issues/1)
+[#1](../../issues/1)
+[#1](../../../issues/1)
+
 
 [#1](#1)
