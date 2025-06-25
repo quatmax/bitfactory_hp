@@ -14,7 +14,9 @@ https://github.com/quatmax/bitfactory_hp/issues/1
 quatmax/bitfactory_hp#1
 
 [#1](../issues/1)
+
 [#1](../../issues/1)
+
 [#1](../../../issues/1)
 
 
